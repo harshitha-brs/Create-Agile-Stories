@@ -1,0 +1,153 @@
+<!--
+     Author: Build Rise Shine with Nyros (BRS) 
+     Created: 2023 
+     Library / Component: Home Page for create agile stories
+     Description: Main page  for the app
+     (c) Copyright by BRS with Nyros. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/3da1a747b2.js"></script>
+    <title>Create Agile Stories | JS Basic Apps</title>
+    <link rel="icon" href="http://203.193.173.125/buildriseshine/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/tracker.css" />
+  </head>
+  <body>
+    <header>
+      <div class="d-flex bg-gradient">
+        <div class="d-flex flex-grow-1">
+          <nav class="courseTitle">
+            <button class="navbar-brand border-0">
+              <img src="assets/img/log.png" alt="logo" />
+            </button>
+          </nav>
+          <div class="flex-grow-1">
+            <div class="ReactTitle ps-3 d-flex align-items-center">
+              <img src="assets/img/logo-javascript@2x.png" alt="logo" />
+              <h3 class="mb-0">JS Basic Apps</h3>
+            </div>
+            <div class="d-flex ps-3 align-items-center">
+              <div class="flex-grow-1">
+                <h4>Create Agile Stories</h4>
+                <p class="pb-0 mb-3 text-start">
+                  Purpose: To create agile stories with priorities
+                </p>
+                <p class="pb-0 mt-0 text-start">
+                  <a
+                    href="https://github.com/harshitha-brs/Create-Agile-Stories"
+                    target="_blank"
+                    >Git Repository</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main role="main" class="container pt-5 pb-5">
+      <section>
+        <h2 class="display-6 pb-2">Create Agile Story</h2>
+        <form id="login-form">
+          <div class="mb-3">
+            <label for="description" class="form-label">Task Description</label>
+            <textarea
+              class="form-control"
+              cols="60"
+              rows="3"
+              placeholder="enter task description"
+              id="description"
+            ></textarea>
+            <div id="descLength" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="assignedto" class="form-label">Assigned To</label>
+            <select class="form-select" id="assignedto" required>
+              <option value="" disabled="disabled" selected>
+                select assigned to
+              </option>
+              <option value="0">Edwin</option>
+              <option value="1">Tom</option>
+              <option value="2">Carl</option>
+              <option value="3">Jerome</option>
+              <option value="4">Carmelo</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="priority" class="form-label">Priority</label>
+            <select class="form-select" id="priority" required>
+              <option value="" disabled="disabled" selected>
+                select priority
+              </option>
+              <option value="0">Low</option>
+              <option value="1">Medium</option>
+              <option value="2">High</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="fromDate" class="form-label">From Date</label>
+            <input type="date" class="form-control" id="fromDate" required />
+          </div>
+          <div class="mb-3">
+            <label for="toDate" class="form-label">To Date</label>
+            <input type="date" class="form-control" id="toDate" required />
+          </div>
+          <button type="submit" class="btn btn-success" id="storySubmitBtn">
+            Create Agile Story
+          </button>
+        </form>
+      </section>
+
+      <section class="pt-5">
+        <div id="storyCardList" class="row g-2"></div>
+      </section>
+    </main>
+
+    <footer class="footer footer-dark">
+      <div class="d-flex justify-content-between px-5">
+        <div>IT WILL CREATE AGILE STORY ACCORDING TO DESCRIPTION</div>
+        <div>
+          <button
+            onclick="setTheme('rgb(241, 15, 166)')"
+            class="theme-switch theme-switch-chathams_blue"
+          ></button>
+          <button
+            onclick="setTheme('rgb(20, 132, 236)')"
+            class="theme-switch theme-switch-tamarillo"
+          ></button>
+          <button
+            onclick="setTheme('rgb(230, 57, 4)')"
+            class="theme-switch theme-switch-yellow_sea"
+          ></button>
+        </div>
+        <div>
+          <img src="assets/img/foot.png" alt="logo" />
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/script.js" defer></script>
+  </body>
+</html>
